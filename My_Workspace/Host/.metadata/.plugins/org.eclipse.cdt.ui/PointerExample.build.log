@@ -1,0 +1,7 @@
+11:15:22 **** Rebuild of configuration Debug for project PointerExample ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o PointerExample.exe main.o 
+
+11:15:22 Build Finished. 0 errors, 0 warnings. (took 407ms)
+

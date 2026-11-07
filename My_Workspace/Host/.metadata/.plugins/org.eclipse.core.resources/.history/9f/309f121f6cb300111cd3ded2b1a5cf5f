@@ -1,0 +1,78 @@
+#include<stdio.h>
+#include<stdint.h>
+
+void main(void)
+{
+	int size_1     = 0;
+	int size_2     = 0;
+	int index      = 0;
+	int max_size   = 0;
+	int tempValue  = 0;
+
+	printf("Enter the size of Array_1:\n");
+	scanf("%d", &size_1);
+
+	printf("Enter the size of Array_2:\n");
+	scanf("%d", &size_2);
+
+	uint32_t array_1[size_1];
+	uint32_t array_2[size_2];
+
+	printf("Enter the elements of array 1:\n");
+
+	for(uint32_t index = 0; index<size_1; index++)
+	{
+		printf("Enter the %d value of Array 1:\n", index);
+		scanf("%d", &array_1[index]);
+
+	}
+
+	printf("Enter the elements of array 2:\n");
+
+	for(index = 0; index<size_2; index++)
+	{
+		printf("Enter the %d value of Array 2:\n", index);
+		scanf("%d", &array_2[index]);
+
+	}
+
+	printf("The Elements of Array 1 are:\n");
+	for(index = 0; index<size_1; index++)
+	{
+		printf("%d\t", array_1[index]);
+	}
+
+	printf("The Elements of Array 2 are:\n");
+	for(index = 0; index<size_2; index++)
+	{
+		printf("%d\t", array_2[index]);
+	}
+	if (size_1 > size_2)
+	{
+		max_size = size_1;
+	}
+	else{
+		max_size = size_2;
+	}
+
+	for(index=0; index < max_size; index++)
+	{
+		tempValue = array_1[index];
+		array_1[index] = array_2[index];
+		array_2[index] = tempValue;
+
+	}
+
+	printf("The Elements of Array 1 are:\n");
+		for(index = 0; index<size_1; index++)
+		{
+			printf("%d\t", array_1[index]);
+		}
+
+		printf("The Elements of Array 2 are:\n");
+		for(index = 0; index<size_2; index++)
+		{
+			printf("%d\t", array_2[index]);
+		}
+
+}

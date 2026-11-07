@@ -1,0 +1,7 @@
+11:30:00 **** Incremental Build of configuration Debug for project ElectronEquation ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o ElectronEquation.exe main.o 
+
+11:30:03 Build Finished. 0 errors, 0 warnings. (took 3s.467ms)
+

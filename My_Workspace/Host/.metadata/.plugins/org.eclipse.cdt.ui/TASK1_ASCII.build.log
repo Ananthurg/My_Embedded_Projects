@@ -1,0 +1,10 @@
+09:30:55 **** Incremental Build of configuration Debug for project TASK1_ASCII ****
+make all 
+process_begin: CreateProcess(NULL, echo "Building file: ../main.c", ...) failed.
+make (e=2): The system cannot find the file specified.
+
+make: *** [subdir.mk:18: main.o] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.
+
+09:30:55 Build Failed. 1 errors, 0 warnings. (took 164ms)
+

@@ -1,0 +1,10 @@
+10:52:50 **** Incremental Build of configuration Debug for project KeypadExc ****
+make -j8 all 
+arm-none-eabi-size  KeypadExc.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4120	     92	   1900	   6112	   17e0	KeypadExc.elf
+Finished building: default.size.stdout
+ 
+
+10:52:50 Build Finished. 0 errors, 0 warnings. (took 256ms)
+

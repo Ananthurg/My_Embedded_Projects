@@ -1,0 +1,15 @@
+12:27:23 **** Incremental Build of configuration Debug for project DataStrucProblem ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:25:11: warning: format '%X' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+   25 |   scanf("%X", &packetValue);
+      |          ~^   ~~~~~~~~~~~~
+      |           |   |
+      |           |   uint8_t * {aka unsigned char *}
+      |           unsigned int *
+..\main.c:25:11: warning: format '%X' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+gcc -o DataStrucProblem.exe main.o 
+
+12:27:23 Build Finished. 0 errors, 2 warnings. (took 409ms)
+

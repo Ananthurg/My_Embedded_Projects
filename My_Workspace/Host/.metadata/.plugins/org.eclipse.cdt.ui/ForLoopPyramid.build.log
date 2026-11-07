@@ -1,0 +1,7 @@
+11:51:33 **** Incremental Build of configuration Debug for project ForLoopPyramid ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o ForLoopPyramid.exe main.o 
+
+11:51:33 Build Finished. 0 errors, 0 warnings. (took 350ms)
+
