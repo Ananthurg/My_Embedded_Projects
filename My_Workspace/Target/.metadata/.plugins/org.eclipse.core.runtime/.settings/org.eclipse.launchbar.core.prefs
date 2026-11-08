@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_Blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_Blink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LED_BlinkBitField,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:IO_PinLD,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:KeypadExc
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:IO_PinLD/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:IO_PinLD/activeLaunchTarget=null\:---
