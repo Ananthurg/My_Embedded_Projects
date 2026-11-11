@@ -1,0 +1,9 @@
+Warning[2073] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 81 : null-terminated initializer string too long
+Warning[2058] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 425 : call of function without prototype
+Warning[2058] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 426 : call of function without prototype
+Warning[2058] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 427 : call of function without prototype
+Warning[2058] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 438 : call of function without prototype
+Warning[2054] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 456 : suspicious pointer conversion
+Warning[2054] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 460 : suspicious pointer conversion
+Warning[2054] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 464 : suspicious pointer conversion
+Warning[2066] E:\25W\PROJECT\ELNC6012PROJECT\ELNCPROJECTGROUP10.c 480 : type qualifier mismatch in assignment

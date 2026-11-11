@@ -1,0 +1,27 @@
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 18 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 18 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 18 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 19 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 19 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 19 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 20 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 20 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 20 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 21 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 21 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 21 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 22 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 22 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 22 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 23 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 23 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 23 : lvalue required
+Warning[2058] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 24 : call of function without prototype
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 25 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 25 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 25 : lvalue required
+Warning[2058] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 26 : call of function without prototype
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 28 : symbol 'LATAbits' has not been defined
+Error[1151] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 28 : struct or union object designator expected
+Error[1101] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 28 : lvalue required
+Error[1105] C:\Users\AnanthuRG\Downloads\LCD_DEMO.X (1)\LCD_DEMO.X\main.c 29 : symbol 'LATAbits' has not been defined

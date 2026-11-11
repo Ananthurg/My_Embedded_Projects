@@ -1,0 +1,8 @@
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 246 : call of function without prototype
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 351 : call of function without prototype
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 354 : call of function without prototype
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 499 : call of function without prototype
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 501 : call of function without prototype
+Warning[2058] D:\25W\PROJECT\steppermotor_LCD\stepper.c 502 : call of function without prototype
+Warning[2066] D:\25W\PROJECT\steppermotor_LCD\stepper.c 504 : type qualifier mismatch in assignment
+Warning[2066] D:\25W\PROJECT\steppermotor_LCD\stepper.c 508 : type qualifier mismatch in assignment

@@ -1,0 +1,228 @@
+/*Use of AI / Cognitive Assistance Software is not allowed in any evaluation, assessment or exercise.*/
+/*=============================================================================
+	File Name:	ELNC6007ARNLAB6.c  
+	Author:		Ananthakrishnan R
+	Date:		21/06/2024
+	Modified:	None
+	© Fanshawe College, 2024
+
+	Description: Incorporate a user interface display and ability to interact with a terminal window. Display important 
+		     information using a standard interface and protocol (hardware and software).
+=============================================================================*/
+
+/* Preprocessor ===============================================================
+   Hardware Configuration Bits ==============================================*/
+#pragma config FOSC		= INTIO67
+#pragma config PLLCFG	= OFF
+#pragma config PRICLKEN = ON
+#pragma config FCMEN	= OFF
+#pragma config IESO		= OFF
+#pragma config PWRTEN	= OFF 
+#pragma config BOREN	= ON
+#pragma config BORV		= 285 
+#pragma config WDTEN	= OFF
+#pragma config PBADEN	= OFF
+#pragma config LVP		= OFF
+#pragma config MCLRE	= EXTMCLR
+
+// Libraries ==================================================================
+#include <p18f45k22.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <delays.h>
+
+// Constants  =================================================================
+#define TRUE	1	
+#define FALSE	0
+#define PBMASK 0xF0	
+#define NOPRESS 0XF0
+#define PB1PRESS 0xE0
+#define PB2PRESS 0xD0
+#define PB3PRESS 0xB0
+#define PB4PRESS 0x70
+#define LEDMASK 0x0F
+#define LEDS LATD
+#define T0FLAG INTCONbits.TMR0IF
+#define SECONDS 60
+#define MINUTES 60
+#define HOURS 24
+
+
+
+// Global Variables  ==========================================================
+
+typedef struct
+{
+	char sec;
+	char min;
+	char hours;
+
+}timer_t;
+
+// Functions  =================================================================
+
+/*>>> setOsc4MHz: ===========================================================
+Author:		Ananthakrishnan R
+Date:		17/05/2024
+Modified:	None
+Desc:		Setting Oscillator frquency to 4MHz
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+void setOsc4MHZ(void)
+{
+	OSCCON = 0x52;
+	while (!OSCCONbits.HFIOFS);			
+} // eo setOsc4MHZ::
+
+/*>>> setPortConfig: ===========================================================
+Author:		Ananthakrishnan R
+Date:		25/05/2024
+Modified:	None
+Desc:		Configuring the Ports and setting ANSELx, LATx, TRISx, Portx registers
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+void portConfig(void)
+{
+	//Pin A Configuration
+	ANSELA = 0x00; // set all pins on port-- A to Digital operation
+	LATA = 0x00; // Latch the pins to output control off
+	TRISA = 0xFF; // Set the pins to output mode
+
+	//Pin B Configuration
+	ANSELB = 0x00; // set all pins on port A to Digital operation
+	LATB = 0x00; // Latch the pins to output control off
+	TRISB = 0xFF; // Set the pins to output mode
+
+	//Pin C Configuration
+	ANSELC = 0x00; // set all pins on port A to Digital operation
+	LATC = 0x00; // Latch the pins to output control off
+	TRISC = 0xFF; // Set the pins to output mode
+
+	//Pin D Configuration
+	ANSELD = 0x00; // set all pins on port A to Digital operation
+	LATD = 0x00; // Latch the pins to output control off
+	TRISD = 0xF0; // Set the pins to output mode
+								
+} // eo portConfig::
+
+/*>>> resetTimer: ===========================================================
+Author:		Ananthakrishnan R
+Date:		14/06/2024
+Modified:	None
+Desc:		Resetting the timer to default values
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+
+void resetTimer(void)
+{
+	T0FLAG = FALSE;
+	TMR0H = 0x0B; //Preset False start value for 1s (Higher bits)
+	TMR0L = 0xDC; //Preset Fasle start value for 1s (Lower bits)
+
+} // eo resetTimer::
+
+/*>>> configTimer: ===========================================================
+Author:		Ananthakrishnan R
+Date:		14/06/2024
+Modified:	None
+Desc:		Configuring the Timer0 
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+
+void configTimer0(void)
+{
+
+	T0CON = 0x93;
+	resetTimer();
+
+} // eo configTimer0::
+
+/*>>> USART1 config: ===========================================================
+Author:		Ananthakrishnan R
+Date:		21/06/2024
+Modified:	None
+Desc:		Configuring the USART1 
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+
+void sp1Config(void)
+{
+	SPBRG1 = 25;
+	BAUDCON1 = 0x40;
+	RCSTA1 = 0x90;
+	TXSTA1 = 0x26;
+	
+
+} // eo sp1Config::
+
+/*>>>systemInitialization: ===========================================================
+Author:		Ananthakrishnan R
+Date:		07/06/2024
+Modified:	21/06/24
+Desc:		Calling all the system initialization functions
+Input: 		None 
+Returns:	None 
+ ============================================================================*/
+
+void systemInitialization(void)
+{
+	setOsc4MHZ();
+	portConfig();
+	configTimer0();
+	sp1Config();
+
+} // eo systemInitialization::
+
+
+
+
+/*=== MAIN: FUNCTION ==========================================================
+ ============================================================================*/
+void main( void )
+{
+	timer_t time;
+	time.sec = 0;
+	time.min = 0;
+	time.hours = 0;
+	systemInitialization();
+
+	while(TRUE)
+	{
+		
+		if(T0FLAG)
+		{
+			resetTimer();
+			time.sec++;
+			if(time.sec == SECONDS)
+			{
+				time.sec = FALSE;
+				time.min++;
+				
+				if(time.min == MINUTES)
+				{	
+					time.min = FALSE;
+					time.hours++;
+
+					if(time.hours == HOURS)
+					{
+						time.hours = FALSE;
+
+					}//eo if loop(hours)
+
+				}//eo if loop(min)
+
+			}//eo if loop(Sec)
+			printf("\033[H");
+			printf("%02d:%02d:%02d", time.hours, time.min, time.sec);
+		}// eo if loop(T0FLAG)
+
+	
+
+	}// eo While loop::
+	
+} // eo main::
