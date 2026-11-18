@@ -14,6 +14,85 @@ Returns:     None
 
 void GPIO_PeriClockControl(GPIO_regDef_t *pGPIOx, uint8_t EnorDi)
 {
+	if(EnorDi == ENABLE)
+	{
+		if(pGPIOx == GPIOA)
+		{
+			GPIOA_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOB)
+		{
+			GPIOB_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOC)
+		{
+			GPIOC_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOD)
+		{
+			GPIOD_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOE)
+		{
+			GPIOE_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOF)
+		{
+			GPIOF_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOG)
+		{
+			GPIOG_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOH)
+		{
+			GPIOH_PCLCK_EN();
+		}
+		if(pGPIOx == GPIOI)
+		{
+			GPIOI_PCLCK_EN();
+		}
+	}
+	else
+	{
+		if(pGPIOx == GPIOA)
+		{
+			GPIOA_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOB)
+		{
+			GPIOB_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOC)
+		{
+			GPIOC_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOD)
+		{
+			GPIOD_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOE)
+		{
+			GPIOE_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOF)
+		{
+			GPIOF_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOG)
+		{
+			GPIOG_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOH)
+		{
+			GPIOH_PCLCK_DI();
+		}
+		if(pGPIOx == GPIOI)
+		{
+			GPIOI_PCLCK_DI();
+		}
+
+	}
 
 }//
 
